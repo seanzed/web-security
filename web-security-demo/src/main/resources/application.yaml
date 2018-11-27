@@ -1,0 +1,29 @@
+# 数据库配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/spring-security-demo?useUnicode=yes&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: root
+  session:
+    store-type: none
+
+#
+security:
+  basic:
+#    enabled: true
+    enabled: false
+# 服务器端口设置
+server:
+  port: 8600
+
+web:
+  security:
+    browser:
+      loginPage: /web-signIn.html
+#      loginType: REDIRECT
+    code:
+      image:
+        width: 150
+        length: 5
+        #url: /user/*
